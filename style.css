@@ -1,4 +1,4 @@
-*{
+/* *{
  margin: 0;
  padding: 0;
  box-sizing: border-box;
@@ -14,6 +14,7 @@ body{
   left:0;
   top: 0;
   padding: 10px;
+  
  
 }
 .sidebar-nav{
@@ -42,7 +43,109 @@ body{
  font-size: 16px;
  font-weight: 600;
 }
-.sidebar-nav ul li a i{
+.sidebar-nav ul li a img{
  font-size: 20px;
  margin-right: 10px;
+}
+.icon{
+  width:25px ;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+} */
+ /* ========== GLOBAL RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+}
+
+/* ========== SIDEBAR ========== */
+.sidebar {
+  width: 250px; /* slightly smaller for a modern look */
+  height: 100vh;
+  background: #121212;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px 10px;
+  overflow-y: auto; /* scroll if items overflow */
+}
+
+/* Scrollbar styling */
+.sidebar::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #333;
+  border-radius: 3px;
+}
+
+/* ========== LOGO ========== */
+.sidebar .logo {
+  width: 140px;
+  margin-bottom: 30px;
+}
+.sidebar .logo img {
+  width: 100%;
+  display: block;
+}
+
+/* ========== NAV LINKS ========== */
+.sidebar-nav ul {
+  list-style: none;
+}
+
+.sidebar-nav ul li {
+  margin-bottom: 15px;
+}
+
+.sidebar-nav ul li a {
+  text-decoration: none;
+  color: #b3b3b3;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.sidebar-nav ul li a .icon {
+  font-size: 20px;
+  width: 25px; /* keep icons aligned */
+  margin-right: 15px;
+  text-align: center;
+}
+
+/* Hover effect */
+.sidebar-nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #1db954; /* Spotify green */
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 80px;
+    padding: 20px 5px;
+  }
+
+  .sidebar .logo {
+    width: 60px;
+    margin-bottom: 20px;
+  }
+
+  .sidebar-nav ul li a span {
+    display: none; /* hide text, show only icons */
+  }
+
+  .sidebar-nav ul li a {
+    justify-content: center;
+  }
 }
