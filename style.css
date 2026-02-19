@@ -170,6 +170,19 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-   
+
+}
+.eng-btn{
+  padding: 8px 20px;
+  background:transparent;
+  text-align: center;
+  outline: none;
+  color: #ffffff;
+  border: 1px solid #818080;
+  border-radius: 20px;
+}
+eng-btn:hover{
+  padding: 11px 11px;
+  border: 1px solid green;
 }
 
