@@ -180,9 +180,11 @@ body {
   color: #ffffff;
   border: 1px solid #818080;
   border-radius: 20px;
+  margin: 20px 0;
 }
-eng-btn:hover{
+.eng-btn:hover{
   padding: 11px 11px;
   border: 1px solid green;
+  color: green;
 }
 
