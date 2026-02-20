@@ -28,7 +28,7 @@ body {
   width: 6px;
 }
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: #333;
+  background-color: #121212;
   border-radius: 3px;
 }
 
@@ -75,7 +75,7 @@ body {
   text-align: center;
 }
 
-/* Hover effect */
+
 .sidebar-nav ul li a:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #1db954; /* Spotify green */
@@ -116,19 +116,19 @@ body {
   margin-bottom: 10px;
 }
 .sidebar-scroll{
-  height: 120px;
+   height: 120px;
   overflow-y: auto;
+  background: transparent; 
 }
 .sidebar-scroll::-webkit-scrollbar{
   background:transparent;
-
-}
+ }
 .sidebar-scroll::-webkit-scrollbar-thumb{
   background:transparent;
-  width: 10px;
+  width: 4px;
 }
 .sidebar-scroll:hover::-webkit-scrollbar-thumb{
-  background:#5c5b5b;
+   background:#5c5b5b; 
   width: 5px;
 }
 .create-playlist h4{
@@ -173,18 +173,90 @@ body {
 
 }
 .eng-btn{
-  padding: 8px 20px;
+  padding: 8px 30px;
   background:transparent;
   text-align: center;
+  display: inline-flex;
   outline: none;
   color: #ffffff;
   border: 1px solid #818080;
   border-radius: 20px;
   margin: 20px 0;
+  overflow-y:inherit ;
+  cursor: pointer;
+  transition: 0.2s ease;
 }
 .eng-btn:hover{
-  padding: 11px 11px;
+  padding: 15px;
   border: 1px solid green;
   color: green;
 }
+.prev-btn {
+  display: flex;
+  gap: 10px; /* space between buttons */
+  justify-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
 
+
+.prev-btn button {
+  background: transparent;
+  border: none;
+  color: #000;     /* black color to see icon */
+  padding: 8px 16px;
+  cursor: pointer;
+  font-size: 20px;     /* icon size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.prev-btn button:hover {
+  color:rgb(42, 249, 42);
+}
+.top-nav {
+  display: flex;
+  justify-content: space-between; /* left: prev/next, right: login/signup */
+  align-items: center;
+  padding: 20px 20px;
+  background: #121212;
+  width: calc(100% - 300px); /* account for sidebar width */
+  margin-left: 300px;        /* same as sidebar width */
+}
+@media screen and (max-width: 768px) {
+  .top-nav {
+    margin-left: 80px; /* collapsed sidebar */
+    width: calc(100% - 80px);
+  }
+}
+.top-nav .login-btn .sign-up{
+  color:#a3a3a0;
+  font-size: 16px;
+  font-weight: 600;
+  margin-right: 2px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.04s ease;
+}
+.top-nav .login-btn .sign-up:hover{
+  color:#ffffff;
+  font-size: 17px;
+}
+.top-nav .login-btn .login{
+  color:#242323;
+  font-size: 16px;
+  border: none;
+  font-weight: 600;
+  background:#9c9999 ;
+  padding: 10px 15px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: 0.04s ease;
+}
+.top-nav .login-btn .login:hover{
+  background: #f3f3f3;
+}
