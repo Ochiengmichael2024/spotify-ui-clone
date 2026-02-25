@@ -13,7 +13,7 @@ body {
 
 /* ========== SIDEBAR ========== */
 .sidebar {
-  width: 300px; /* slightly smaller for a modern look */
+  width: 200px; /* slightly smaller for a modern look */
   height: 100vh;
   background: #121212;
   position: fixed;
@@ -222,29 +222,28 @@ body {
   align-items: center;
   position: fixed;
   justify-content: space-between; /* left: prev/next, right: login/signup */
-  padding: 10px 10px;
+  padding: 15px 30px;
   background: #121212;
-  width: calc(100% - 300px); /* account for sidebar width */
-  margin-bottom:60px;       /* same as sidebar width */
-  margin-left: -20px;
-  flex-shrink: 0;
+  width: calc(100% -200px); /* account for sidebar width */
+  top:0;
+  left:0;
+  right: 0;
+
 }
 .search-bar{
-  position:relative;
-  width:800px;
-  height: 40px;
-  margin-right: 80px;
+  flex: 1;
+  max-width: 500px;
+  margin: 0 30px;
+    position:relative;
 }
 .search-bar input{
   width: 100%;
-  height: 100%;
-  min-width: 200px;
-  padding: 20px 40px 20px 50px;
-  overflow-y: auto;
+  height: 40px;
+  padding: 0 40px 0 45px;
   border-radius: 25px;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size:16px;
   background-color: #282828;
   color: white;
 }
@@ -266,12 +265,7 @@ body {
   outline:1px solid #ffffff;
 }
 
-@media screen and (max-width: 768px) {
-  .top-nav {
-    margin-left: 75px; /* collapsed sidebar */
-    width: calc(100% - 75px);
-  }
-}
+
 .top-nav .login-btn{
   display: flex;
   gap: 10px;
@@ -307,42 +301,60 @@ body {
 .top-nav .login-btn .login:hover{
   background: #ffffff;
 }
-
 .main-section {
-  margin-left: 300px;   /* same width as sidebar */
+  margin-left: 200px;   /* same width as sidebar */
   padding: 20px;
   min-height: 100vh;
   background: linear-gradient(to bottom, #12343b, #000);
   color: white;
   flex-shrink: 0;
 }
- @media screen and (max-width: 768px) {
-  .main-section{
-    margin-left: 80px; 
-    width: calc(100% - 80px);
-  }}
+
 .browse-section{
-  padding: 40px 0;
+  padding:30px;
   min-height: 100vh;
-  margin-top:50px ;
+  margin-top:20px ;
   margin-left: -20px;
   background:red ;
 }
+@media screen and (max-width: 768px) {
+
+  .main-section {
+    margin-left: 80px;
+  }
+  .top-nav {
+    margin-left: 80px; /* collapsed sidebar */
+    width: calc(100% - 80px);
+  }
+  .sidebar {
+    width: 80px;
+  }
+
+  .search-bar {
+    max-width: 250px;
+    padding: 0 10px;
+  }
+
+}
+
 .filters {
 display: flex;
 gap: 15px;
 margin-top: 30px;
 }
 .filters button{
-  padding: 10px 20px;
+  padding: 8px 18px;
   border: none;
   border-radius: 20px;
   background:#8abbca;
   color: white;
   cursor: pointer;
-  font-weight: 400;
+  transition: 0.3s ease;
 }
 .filters button.active{
   background: white;
   color: black;
+}
+.filters button:hover{
+  background: #3a3a3a;
 }
