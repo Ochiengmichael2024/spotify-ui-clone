@@ -225,7 +225,8 @@ body {
   padding: 10px 10px;
   background: #121212;
   width: calc(100% - 300px); /* account for sidebar width */
-  margin-left: 300px;        /* same as sidebar width */
+  margin-bottom:60px;       /* same as sidebar width */
+  margin-left: -20px;
   flex-shrink: 0;
 }
 .search-bar{
@@ -267,8 +268,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .top-nav {
-    margin-left: 80px; /* collapsed sidebar */
-    width: calc(100% - 80px);
+    margin-left: 75px; /* collapsed sidebar */
+    width: calc(100% - 75px);
   }
 }
 .top-nav .login-btn{
@@ -306,43 +307,42 @@ body {
 .top-nav .login-btn .login:hover{
   background: #ffffff;
 }
-.spotify-playlist{
-  padding: 20px 40px; 
+
+.main-section {
+  margin-left: 300px;   /* same width as sidebar */
+  padding: 20px;
+  min-height: 100vh;
+  background: linear-gradient(to bottom, #12343b, #000);
+  color: white;
+  flex-shrink: 0;
 }
-.spotify-playlist h4{
-  color: #fff;
-font-size: 22px;
-margin-bottom: 20px;
-}
-.spotify-playlist .card {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
- justify-content: center;
- align-items: center;
- gap: 20px;
- overflow: hidden;
-}
-.spotify-playlist .card .item{
-  min-width: 140px;
-  width: 160px;
-  background-color: #323131;
-  cursor: pointer;
-  border-radius: 6px;
-  padding: 15px;
-}
-.spotify-playlist .card .item img{
-  width: 100%;
-  border-radius: 6px;
-  justify-content: center;
-  align-items: center;
-}
-.spotify-playlist .item h4,p{
-  color: #f1eeee;
-  text-align: center;
-}
- @media screen and (max-width: 800px) {
-  .spotify-playlist {
+ @media screen and (max-width: 768px) {
+  .main-section{
     margin-left: 80px; 
     width: calc(100% - 80px);
-  }
-} 
+  }}
+.browse-section{
+  padding: 40px 0;
+  min-height: 100vh;
+  margin-top:50px ;
+  margin-left: -20px;
+  background:red ;
+}
+.filters {
+display: flex;
+gap: 15px;
+margin-top: 30px;
+}
+.filters button{
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background:#8abbca;
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+}
+.filters button.active{
+  background: white;
+  color: black;
+}
